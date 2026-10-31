@@ -70,15 +70,15 @@ draw.rectangle([lx - 3, ly - 3, lx + 3, ly + 3], fill=(*MINT, 235))
 
 name_f = font(BOLD, 70)
 tag_f = font(REG, 25)
-chip_f = font(MONO, 14, index=0)
+chip_f = font(MONO, 16, index=0)
 draw.text((138, 70), "Mayank", font=name_f, fill=TEXT)
-draw.text((141, 152), "Building performance tooling for Minecraft servers.", font=tag_f, fill=(199, 208, 218))
+draw.text((141, 154), "Building performance tooling for Minecraft servers.", font=tag_f, fill=(211, 219, 228))
 
 # chips
-chips = ["Java 21", "Paper 1.21", "SQLite / MySQL", "GitHub Actions"]
+chips = ["Java 21", "Paper 1.21", "SQLite / MySQL", "19 tests"]
 cx = 141
 cy = 222
-pad_x, pad_y = 12, 7
+pad_x, pad_y = 15, 8
 for label in chips:
     bbox = draw.textbbox((0, 0), label, font=chip_f)
     w = bbox[2] - bbox[0] + pad_x * 2
